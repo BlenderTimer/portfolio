@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYR26MG6YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'G-SYR26MG6YV');
+		</script>
+		<meta charset="utf-8">
+		<title>Featured Photos - Daniel Roberts - BlenderTimer</title>
+		<meta name="description" content="A curated photography portfolio showcasing my best work in landscape, wildlife, astrophotography, macro, and other photography areas. Featuring my personal favorite and highest quality photos!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="https://blendertimer.com/static/defaults/theme.css">
+		<link rel="stylesheet" type="text/css" href="https://blendertimer.com/static/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/portfolios.css">
+		<script src="https://blendertimer.com/bt-js/bt-js.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<script src="https://blendertimer.com/static/defaults/pages.js"></script>
+		<noscript>
+			<div id="nojs" style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex; flex-flow: column; justify-content: center; align-items: center; background: var(--semi-back); padding: 15px 20px; z-index: 1000000; cursor: default;">
+				<b style="font-family: sans-serif; font-size: 16pt; color: #FFF; text-align: center;">Page Failed to Load</b>
+				<p style="font-family: sans-serif; font-size: 14pt; color: #FFF6; text-align: center;">This website requires Javascript to operate.</p>
+			</div>
+		</noscript>
+		<div id="loader" style="width: 100%; height: calc(100% - 50px); top: 50px; left: 0px; position: fixed; z-index: -100000;">
+			<img alt="Loading" src="https://blendertimer.com/static/images/loader.gif" style="width: 100px; height: 100px; position: fixed; left: calc(50% - 50px); top: calc(50% - 25px); filter: drop-shadow(0px 0px 15px #000000);">
+		</div>
+		<div id="content-viewer-container" onclick="attemptCloseContentViewer(event)" style="opacity: 0; pointer-events: none;">
+			<div id="content-viewer" style="transform: scale(0);">
+				<div id="viewer-gradient-top"></div>
+				<div id="viewer-gradient-bottom"></div>
+				<div id="viewer-left"></div>
+				<div id="viewer-right"></div>
+				<img id="viewer-close" src="https://blendertimer.com/static/images/icons/x-spaced.svg" alt="Close" onclick="closeContentViewer()">
+			</div>
+		</div>
+		<div id="content-main" style="opacity: 0; transition: 0.5s;">
+			<div id="portfolio-header">
+				<div id="ph-content">
+					<div id="ph-left">
+						<div id="ph-title"><h3>Best of BlenderTimer</h3><h1>Featured Photos</h1></div>
+						<div id="ph-links">
+							<i>Follow me on social media!</i>
+							<div id="ph-link-list">
+								<a href="https://instagram.com/blendertimer" title="Instagram"><img src="https://blendertimer.com/static/images/logos/instagram-white.svg" alt="Instagram logo"></a>
+								<a href="https://pixabay.com/users/blendertimer-9538909" title="Pixabay"><img src="https://blendertimer.com/static/images/logos/pixabay-white.svg" alt="Pixabay logo"></a>
+								<a href="https://youtube.com/BlenderTimer" title="YouTube"><img src="https://blendertimer.com/static/images/logos/youtube-white.svg" alt="YouTube logo"></a>
+							</div>
+						</div>
+					</div>
+					<div id="ph-right">
+						<img src="https://blendertimer.com/static/images/daniel-roberts.jpg" alt="Daniel Roberts">
+						<b>Daniel Roberts</b>
+						<i id="career"></i>
+						<script>document.getElementById('career').innerHTML = `photographer for ${Math.floor((Date.now()-new Date(2011, 7, 1).getTime())/31536000000)} years`</script>
+					</div>
+				</div>
+			</div>
+			<div id="portfolio-collections"><div id="collections-scroll-left"><img src="https://blendertimer.com/static/images/icons/left.svg" alt="Left Arrow" onclick="collectionsScroll(event)"></div><div id="collections-scroll-right"><img src="https://blendertimer.com/static/images/icons/right.svg" alt="Right Arrow" onclick="collectionsScroll(event)"></div><div id="portfolio-collections-list" onmousewheel="collectionsScrollWheel(event)"></div></div>
+			<div id="portfolio-content"></div>
+		</div>
+		<footer></footer>
+		<script src="https://blendertimer.com/static/defaults/headerfooter-loader.js"></script>
+		<script src="/general-data/media.js"></script>
+		<script src="https://blendertimer.com/static/main.js"></script>
+		<script src="/static/portfolios.js"></script>
+	</body>
+</html>
