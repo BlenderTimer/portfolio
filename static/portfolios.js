@@ -70,7 +70,13 @@ checkContentViewing();
 
 if (portfolioCategory == "photo") {
 	let h = -5 + portfolioContent.offsetTop+50;
-	if (window.innerWidth > 1500) {
+	if (window.innerWidth > 2200) {
+		portfolioContent.innerHTML = `<div class="content-column"></div><div class="content-column"></div><div class="content-column"></div><div class="content-column"></div>`;
+		portfolioContent.classList.add("four-column");
+		columns = 4;
+		columnHeights = [h, h, h, h];
+	}
+	else if (window.innerWidth > 1500) {
 		portfolioContent.innerHTML = `<div class="content-column"></div><div class="content-column"></div><div class="content-column"></div>`;
 		portfolioContent.classList.add("three-column");
 		columns = 3;

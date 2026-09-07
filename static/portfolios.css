@@ -1,3 +1,8 @@
+#content-main {
+	max-width: 2200px;
+	margin: 0 auto;
+}
+
 #content-viewer-container {
 	display: flex;
 	justify-content: center;
@@ -469,6 +474,10 @@
 
 .three-column {
 	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.four-column {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .content-column {
