@@ -123,7 +123,7 @@ function loadPhotos() {
 				history.replaceState({}, `${photo.title} - Daniel Roberts - BlenderTimer`, url);
 				checkContentViewing();
 			});
-			item.innerHTML = `<img src="/media/photos/${photo.title.getLink()}-thumb.avif"><div class="item-hover"><div class="item-hover-border"></div></div>`;
+			item.innerHTML = `<img src="/media/photos/${photo.title.getLink()}-thumb.avif" alt='${photo.title}${photo.subject&&photo.subject.length>0 ? " (" + photo.subject + ")":""} by Daniel Roberts (BlenderTimer)'><div class="item-hover"><div class="item-hover-border"></div></div>`;
 			let addColumn = columnHeights.indexOf(photosReach);
 			portfolioContent.children[addColumn].appendChild(item);
 			let aspect = photo.width/photo.height;
