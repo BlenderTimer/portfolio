@@ -165,7 +165,7 @@ function checkContentViewing(loadTitle = true) {
 					if (photo.collections.indexOf(portfolioCollection) > -1) {
 						if (contentViewing.length > 0 && photo.title.toLowerCase() == contentViewing) {
 							document.title = `${photo.title} - Daniel Roberts - BlenderTimer`;
-							viewerContentBox.innerHTML = `<img width="${photo.width}" height="${photo.height}" src="/media/photos/${photo.title.getLink()}-thumb.${photo.filetype.indexOf("/") > -1 ? photo.filetype.removeBefore("/", 1) : photo.filetype}" alt='${photo.title}${photo.subject&&photo.subject.length>0 ? " (" + photo.subject + ")":""} by Daniel Roberts (BlenderTimer)'>`;
+							viewerContentBox.innerHTML = `<img width="${photo.width}" height="${photo.height}" src="/media/photos/${photo.title.getLink()}-thumb.avif" alt='${photo.title}${photo.subject&&photo.subject.length>0 ? " (" + photo.subject + ")":""} by Daniel Roberts (BlenderTimer)'>`;
 							contentSize = {w:photo.width,h:photo.height};
 							fitPreview();
 							setTimeout(function() {viewerContentBox.children[0].src = `/media/photos/${photo.title.getLink()}-preview.avif`}, 1);
