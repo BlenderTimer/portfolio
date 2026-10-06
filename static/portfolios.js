@@ -123,7 +123,7 @@ function loadPhotos() {
 				history.replaceState({}, `${photo.title} - Daniel Roberts - BlenderTimer`, url);
 				checkContentViewing();
 			});
-			item.innerHTML = `<img src="/media/photos/${photo.title.getLink()}-thumb.${photo.filetype.indexOf("/") > -1 ? photo.filetype.removeBefore("/", 1) : photo.filetype}"><div class="item-hover"><div class="item-hover-border"></div></div>`;
+			item.innerHTML = `<img src="/media/photos/${photo.title.getLink()}-thumb.avif"><div class="item-hover"><div class="item-hover-border"></div></div>`;
 			let addColumn = columnHeights.indexOf(photosReach);
 			portfolioContent.children[addColumn].appendChild(item);
 			let aspect = photo.width/photo.height;
@@ -168,7 +168,7 @@ function checkContentViewing(loadTitle = true) {
 							viewerContentBox.innerHTML = `<img width="${photo.width}" height="${photo.height}" src="/media/photos/${photo.title.getLink()}-thumb.${photo.filetype.indexOf("/") > -1 ? photo.filetype.removeBefore("/", 1) : photo.filetype}" alt='${photo.title}${photo.subject&&photo.subject.length>0 ? " (" + photo.subject + ")":""} by Daniel Roberts (BlenderTimer)'>`;
 							contentSize = {w:photo.width,h:photo.height};
 							fitPreview();
-							setTimeout(function() {viewerContentBox.children[0].src = `/media/photos/${photo.title.getLink()}-preview.${photo.filetype.indexOf("/") > -1 ? photo.filetype.removeBefore("/", 1) : photo.filetype}`}, 1);
+							setTimeout(function() {viewerContentBox.children[0].src = `/media/photos/${photo.title.getLink()}-preview.avif`}, 1);
 							let html = `<h1>${photo.title}</h1>`;
 							if (photo.subject && photo.subject.length > 0) {
 								html += `<h3>${photo.subject}</h3>`;
